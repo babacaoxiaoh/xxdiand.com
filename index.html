@@ -4,66 +4,43 @@
 <meta charset="UTF-8" />
 <title>百万导航站</title>
 <style>
-  /* 容器设置 */
   .carousel {
-    width: 100%; /* 自适应宽度 */
-    max-width: 970px; /* 限制最大宽度 */
-    overflow: hidden; /* 隐藏溢出部分 */
-    margin: 0 auto; /* 居中 */
+    width: 100%;
+    max-width: 970px;
+    overflow: hidden;
+    margin: 0 auto;
     position: relative;
   }
-
-  /* 轮播内容 */
   .slides {
     display: flex;
-    width: calc(970px * 4); /* 四张图片 */
-    animation: slide 16s infinite;
+    width: calc( (970px + 10px) * 2 ); /* 两倍长度，适应内容复制 */
+    animation: scroll 20s linear infinite;
   }
-
-  /* 每个图片 */
   .slides img {
-    width: 970px; /* 固定宽度 */
-    height: 80px; /* 高度可调整 */
+    width: 90px; /* 改小尺寸，比如90px */
+    height: auto;
+    margin-right: 10px; /* 图片间距 */
+    flex-shrink: 0;
   }
 
-  /* 轮播动画 */
-  @keyframes slide {
+  /* 缓动无缝滚动动画 */
+  @keyframes scroll {
     0% { transform: translateX(0); }
-    20% { transform: translateX(0); }
-    25% { transform: translateX(-970px); }
-    45% { transform: translateX(-970px); }
-    50% { transform: translateX(-1940px); }
-    70% { transform: translateX(-1940px); }
-    75% { transform: translateX(-2910px); }
-    95% { transform: translateX(-2910px); }
-    100% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 
-  /* 悬停暂停动画 */
-  .carousel:hover .slides {
-    animation-play-state: paused;
-  }
-
-  /* 手机端自适应：图片宽度百分比 */
+  /* 在手机端调整自适应 */
   @media(max-width: 768px) {
     .slides {
-      width: calc(100% * 4);
-      animation: slideMobile 16s linear infinite;
+      width: calc( (100% + 1%) * 2 ); /* 这里简化了，具体根据图片宽度调整 */
+      animation: scrollMobile 20s linear infinite;
+    }
+    @keyframes scrollMobile {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
     .slides img {
-      width: 100%; /* 宽度自适应 */
-      height: auto;
-    }
-    @keyframes slideMobile {
-      0% { transform: translateX(0); }
-      20% { transform: translateX(0); }
-      25% { transform: translateX(-100%); }
-      45% { transform: translateX(-100%); }
-      50% { transform: translateX(-200%); }
-      70% { transform: translateX(-200%); }
-      75% { transform: translateX(-300%); }
-      95% { transform: translateX(-300%); }
-      100% { transform: translateX(0); }
+      width: 20%; /* 图片宽度自适应，不留空白 */
     }
   }
 </style>
@@ -71,11 +48,16 @@
 <body>
 <div class="carousel">
   <div class="slides">
-    <!-- 你可以换成你自己的图片地址 -->
-    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/4.png" alt="图片1" />
-    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/6.png" alt="图片2" />
-    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/5.png" alt="图片3" />
-    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/4.png" alt="图片4" />
+    <!-- 原始内容 -->
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/1.png" alt="1" />
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/2.png" alt="2" />
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/3.png" alt="3" />
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/4.png" alt="4" />
+    <!-- 内容复制一份 -->
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/5.png" alt="1" />
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/6.png" alt="2" />
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/3.png" alt="3" />
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/4.png" alt="4" />
   </div>
 </div>
 </body>
