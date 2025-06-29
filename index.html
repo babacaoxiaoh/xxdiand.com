@@ -2,32 +2,34 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
-<title>图片轮播</title>
+<title>自适应轮播</title>
 <style>
-  /* 容器样式 */
+  /* 容器样式，宽度百分比（比如100%） */
   .banner-container {
-    width: 970px;
+    width: 100%; /* 让容器宽度占满父元素 */
+    max-width: 970px; /* 最大宽度控制为970px */
     height: 80px;
     overflow: hidden;
     position: relative;
     border: 1px solid #ccc;
+    margin: 0 auto; /* 居中 */
   }
 
-  /* 轮播内容样式 */
+  /* 轮播内容 */
   .banner-slideshow {
     display: flex;
-    width: max-content; /* 内容宽度自适应 */
-    animation: slide 10s linear infinite; /* 动画持续时间和无限循环 */
+    width: calc(970px * 3); /* 根据图片数量调整总宽度，如果图片是3张 */
+    animation: slide 10s linear infinite;
   }
 
   /* 图片样式 */
   .banner-slideshow img {
-    width: 970px;
+    width: 100%; /* 让每张图片响应式宽度 */
     height: 80px;
     flex-shrink: 0;
   }
 
-  /* 定义动画关键帧 */
+  /* 关键帧动画调整，使之适应不同图片数量 */
   @keyframes slide {
     0% {
       transform: translateX(0);
@@ -36,16 +38,30 @@
       transform: translateX(0);
     }
     33.33% {
-      transform: translateX(-970px);
+      transform: translateX(-100%);
     }
     58.33% {
-      transform: translateX(-970px);
+      transform: translateX(-100%);
     }
     66.66% {
-      transform: translateX(-1940px);
+      transform: translateX(-200%);
     }
     100% {
       transform: translateX(0);
+    }
+  }
+
+  /* 媒体查询，手机端样式调整 */
+  @media (max-width: 768px) {
+    .banner-container {
+      height: 60px;
+    }
+    .banner-slideshow {
+      /* 这里的动画可以调整 */
+      animation: slide 8s linear infinite;
+    }
+    .banner-slideshow img {
+      height: 60px;
     }
   }
 </style>
@@ -53,11 +69,10 @@
 <body>
 <div class="banner-container">
   <div class="banner-slideshow">
-    <!-- 这里放你的图片 -->
+    <!-- 替换图片地址 -->
     <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/1.png" alt="图片1" />
     <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/2.png" alt="图片2" />
     <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/3.png" alt="图片3" />
-    <!-- 可以添加更多图片 -->
   </div>
 </div>
 </body>
@@ -226,79 +241,79 @@ form.home_search{
     <div class="type-content">
         <ul class="clear-cq">
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/252.html">偷拍偷窥</a>
+                    <a class="type-tiao-go" target="_blank" href="https://i3j4k5l6.yrxh8.sbs/vodtype/29.html">偷拍偷窥</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/253.html">强奸乱伦</a>
+                    <a class="type-tiao-go" target="_blank" href="https://true5cd6b2.naihendacdso.buzz/?utm_source=linzho.vwolfsexse.buzz">强奸乱伦</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/254.html">明星换脸</a>
+                    <a class="type-tiao-go" target="_blank" href="https://std002.buzz/blog/food.html?for=de0mk4xf&r=https://true5cd6b2.naihendacdso.buzz/&ptr=https://stdtwo001.xyz/">明星换脸</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/258.html">SM专区</a>
+                    <a class="type-tiao-go" target="_blank" href="https://nbo-levv1t60.2025vvipb-dave.click/?utm_source=baise.xiaomi-7ae.buzz">SM专区</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/259.html">女同专区</a>
+                    <a class="type-tiao-go" target="_blank" href="https://ohcashi--d.anyeav070.sbs/%E4%B8%96%E7%95%8C%E5%92%8C%E5%B9%B3/?r=use-chef-snow.sexav-102.com">女同专区</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/247.html">AV解说</a>
+                    <a class="type-tiao-go" target="_blank" href="https://d1af2ah--ncj.xodlapp-001.com/%E5%81%A5%E5%BA%B7%E7%B6%A0%E8%89%B2/wd33k.html">AV解说</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/248.html">欧美专区</a>
+                    <a class="type-tiao-go" target="_blank" href="https://i3j4k5l6.wuwuxia46.cc/label/%E6%B1%A1.html?https://xn--7iq522e.wuwu2025.icu/%E9%87%91%E6%89%8B%E6%8C%87.html">欧美专区</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/249.html">网曝门事件</a>
+                    <a class="type-tiao-go" target="_blank" href="https://blrukou.com/%E4%B8%8D%E8%89%AF%E4%BA%BA%E7%94%9F/?r=rjq--ailohbaiyi.zza5top7y5m6.xyz">网曝门事件</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/240.html">中文字幕</a>
+                    <a class="type-tiao-go" target="_blank" href="https://1g6ok54b.kcqsy-bio.buzz/?utm_source=https://true5cd6b2.naihendacdso.buzz/?utm_source=linzho.vwolfsexse.buzz">中文字幕</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/241.html">无码专区</a>
+                    <a class="type-tiao-go" target="_blank" href="https://rock-star-club.adultporna-av102.com/zzzz/?link=chanujiao2261.com">无码专区</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/242.html">VR专区</a>
+                    <a class="type-tiao-go" target="_blank" href="https://i3j4k5l6.wuwuxia46.cc/label/%E6%B1%A1.html?https://xn--7iq522e.wuwu2025.icu/%E9%87%91%E6%89%8B%E6%8C%87.html">VR专区</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/245.html">日韩专区</a>
+                    <a class="type-tiao-go" target="_blank" href="https://blrukou.com/%E4%B8%8D%E8%89%AF%E4%BA%BA%E7%94%9F/?r=rjq--ailohbaiyi.zza5top7y5m6.xyz">日韩专区</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/239.html">伦理三级</a>
+                    <a class="type-tiao-go" target="_blank" href="https://52iekd.saoni652sx.cyou/">伦理三级</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/238.html">性感主播</a>
+                    <a class="type-tiao-go" target="_blank" href="https://82.xfbs13.buzz/index.php?utm_source=sjtd3yl">性感主播</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/234.html">国产视频</a>
+                    <a class="type-tiao-go" target="_blank" href="https://rock-star-club.adultporna-av102.com/zzzz/?link=chanujiao2261.com">国产视频</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/246.html">精品动漫</a>
+                    <a class="type-tiao-go" target="_blank" href="https://i3j4k5l6.yrxh8.sbs/vodtype/29.html">精品动漫</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/236.html">传媒视频</a>
+                    <a class="type-tiao-go" target="_blank" href="https://std002.buzz/blog/food.html?for=de0mk4xf&r=https://true5cd6b2.naihendacdso.buzz/&ptr=https://stdtwo001.xyz/">传媒视频</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/263.html">萝莉少女</a>
+                    <a class="type-tiao-go" target="_blank" href="https://blrukou.com/%E4%B8%8D%E8%89%AF%E4%BA%BA%E7%94%9F/?r=rjq--ailohbaiyi.zza5top7y5m6.xyz">萝莉少女</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/264.html">乱伦中文</a>
+                    <a class="type-tiao-go" target="_blank" href="https://52iekd.saoni652sx.cyou/">乱伦中文</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/265.html">出轨中文</a>
+                    <a class="type-tiao-go" target="_blank" href="https://1g6ok54b.kcqsy-bio.buzz/?utm_source=https://true5cd6b2.naihendacdso.buzz/?utm_source=linzho.vwolfsexse.buzz">出轨中文</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/266.html">强奸中文</a>
+                    <a class="type-tiao-go" target="_blank" href="https://rock-star-club.adultporna-av102.com/zzzz/?link=chanujiao2261.com">强奸中文</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/267.html">人妻中文</a>
+                    <a class="type-tiao-go" target="_blank" href="https://rock-star-club.adultporna-av102.com/zzzz/?link=chanujiao2261.com">人妻中文</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/268.html">制服中文</a>
+                    <a class="type-tiao-go" target="_blank" href="https://std002.buzz/blog/food.html?for=de0mk4xf&r=https://true5cd6b2.naihendacdso.buzz/&ptr=https://stdtwo001.xyz/">制服中文</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/269.html">调教中文</a>
+                    <a class="type-tiao-go" target="_blank" href="https://std002.buzz/blog/food.html?for=de0mk4xf&r=https://true5cd6b2.naihendacdso.buzz/&ptr=https://stdtwo001.xyz/">调教中文</a>
                 </li>
                             <li class="fl">
-                    <a class="type-tiao-go" target="_blank" href="/123/index.php/vod/type/id/270.html">糖心Vlog</a>
+                    <a class="type-tiao-go" target="_blank" href="https://blrukou.com/%E4%B8%8D%E8%89%AF%E4%BA%BA%E7%94%9F/?r=rjq--ailohbaiyi.zza5top7y5m6.xyz">糖心Vlog</a>
                 </li>
                     </ul>    
     </div>
