@@ -2,72 +2,86 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
-<title>图片轮播居中</title>
+<title>百万导航站</title>
 <style>
   body {
     margin: 0;
-    padding: 0;
   }
-  /* 容器保持中央 */
   .banner-container {
-    width: 100%; /* 占满页面宽度 */
-    max-width: 970px; /* 最大宽度970px */
+    width: 100%;
+    max-width: 970px;
     height: 80px;
     overflow: hidden;
-    margin: 0 auto; /* 居中 */
+    margin: 0 auto;
     position: relative;
-    border: 1px solid #ccc;
   }
-
-  /* 轮播内容，使用transform动画 */
   .banner-slideshow {
     display: flex;
-    /* 根据图片数量设宽度，这里示例3张图片 */
     width: calc(970px * 3);
-    height: 80px;
-    animation: slide 10s linear infinite;
+    /* 这里用动画实现连续滑动 */
+    animation: slide 12s linear infinite;
   }
-
-  /* 单张图片 */
   .banner-slideshow img {
-    width: 970px; /* 保持图片宽度为970px */
+    width: 970px; /* 每张图片宽度 */
     height: 80px;
     flex-shrink: 0;
   }
 
-  /* 动画关键帧 */
   @keyframes slide {
     0% {
       transform: translateX(0);
     }
-    25% {
-      transform: translateX(0);
+    20% {
+      transform: translateX(0); /* 保持一段时间在第一张 */
     }
     33.33% {
-      transform: translateX(-970px);
+      transform: translateX(-970px); /* 移到第二张 */
     }
-    58.33% {
+    53.33% {
       transform: translateX(-970px);
     }
     66.66% {
+      transform: translateX(-1940px); /* 移到第三张 */
+    }
+    86.66% {
       transform: translateX(-1940px);
     }
     100% {
-      transform: translateX(0);
+      transform: translateX(0); /* 返回到第一张 */
     }
   }
 
-  /* 手机端调整 */
+  /* 适配手机屏幕：图片自适应宽度 */
   @media(max-width: 768px) {
-    .banner-container {
-      height: 60px;
-    }
     .banner-slideshow {
-      animation-duration: 8s;
+      animation: slideMobile 12s linear infinite;
+    }
+    @keyframes slideMobile {
+      0% {
+        transform: translateX(0);
+      }
+      20% {
+        transform: translateX(0);
+      }
+      33.33% {
+        transform: translateX(-100%);
+      }
+      53.33% {
+        transform: translateX(-100%);
+      }
+      66.66% {
+        transform: translateX(-200%);
+      }
+      86.66% {
+        transform: translateX(-200%);
+      }
+      100% {
+        transform: translateX(0);
+      }
     }
     .banner-slideshow img {
-      width: 100%; /* 自适应宽度 */
-      height: 60px;
+      width: 100%;
+      height: auto;
     }
   }
 </style>
@@ -75,6 +89,7 @@
 <body>
 <div class="banner-container">
   <div class="banner-slideshow">
+    <!-- 这里放你的图片 URL -->
     <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/3.png" alt="图片1" />
     <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/2.png" alt="图片2" />
     <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/1.png" alt="图片3" />
@@ -82,6 +97,7 @@
 </div>
 </body>
 </html>
+
 <!--<meta name="baidu_union_verify" content="ecc3609e2a30e49c13d8ed9924bacf2d">-->
 <meta charset="utf-8">
 <title>乱伦视频-性感-精彩-成人影院</title>
