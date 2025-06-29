@@ -1,7 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<meta charset="UTF-8" />
+<title>图片轮播</title>
+<style>
+  /* 容器样式 */
+  .banner-container {
+    width: 970px;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ccc;
+  }
+
+  /* 轮播内容样式 */
+  .banner-slideshow {
+    display: flex;
+    width: max-content; /* 内容宽度自适应 */
+    animation: slide 10s linear infinite; /* 动画持续时间和无限循环 */
+  }
+
+  /* 图片样式 */
+  .banner-slideshow img {
+    width: 970px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  /* 定义动画关键帧 */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(0);
+    }
+    33.33% {
+      transform: translateX(-970px);
+    }
+    58.33% {
+      transform: translateX(-970px);
+    }
+    66.66% {
+      transform: translateX(-1940px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+</style>
+</head>
+<body>
+<div class="banner-container">
+  <div class="banner-slideshow">
+    <!-- 这里放你的图片 -->
+    <img src="https://via.placeholder.com/970x80?text=图片1" alt="图片1" />
+    <img src="https://via.placeholder.com/970x80?text=图片2" alt="图片2" />
+    <img src="https://via.placeholder.com/970x80?text=图片3" alt="图片3" />
+    <!-- 可以添加更多图片 -->
+  </div>
+</div>
+</body>
+</html>
 <!--<meta name="baidu_union_verify" content="ecc3609e2a30e49c13d8ed9924bacf2d">-->
 <meta charset="utf-8">
 <title>乱伦视频-性感-精彩-成人影院</title>
