@@ -4,96 +4,20 @@
 <meta charset="UTF-8" />
 <title>百万导航站</title>
 <style>
-  body {
-    margin: 0;
-  }
-  .banner-container {
-    width: 100%;
-    max-width: 970px;
-    height: 80px;
-    overflow: hidden;
-    margin: 0 auto;
-    position: relative;
-  }
-  .banner-slideshow {
-    display: flex;
-    width: calc(970px * 3);
-    /* 这里用动画实现连续滑动 */
-    animation: slide 12s linear infinite;
-  }
-  .banner-slideshow img {
-    width: 970px; /* 每张图片宽度 */
-    height: 80px;
-    flex-shrink: 0;
-  }
-
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    20% {
-      transform: translateX(0); /* 保持一段时间在第一张 */
-    }
-    33.33% {
-      transform: translateX(-970px); /* 移到第二张 */
-    }
-    53.33% {
-      transform: translateX(-970px);
-    }
-    66.66% {
-      transform: translateX(-1940px); /* 移到第三张 */
-    }
-    86.66% {
-      transform: translateX(-1940px);
-    }
-    100% {
-      transform: translateX(0); /* 返回到第一张 */
-    }
-  }
-
-  /* 适配手机屏幕：图片自适应宽度 */
-  @media(max-width: 768px) {
-    .banner-slideshow {
-      animation: slideMobile 12s linear infinite;
-    }
-    @keyframes slideMobile {
-      0% {
-        transform: translateX(0);
-      }
-      20% {
-        transform: translateX(0);
-      }
-      33.33% {
-        transform: translateX(-100%);
-      }
-      53.33% {
-        transform: translateX(-100%);
-      }
-      66.66% {
-        transform: translateX(-200%);
-      }
-      86.66% {
-        transform: translateX(-200%);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-    .banner-slideshow img {
-      width: 100%;
-      height: auto;
-    }
+  /* 顶部导航样式 */
+  .top-nav {
+    background-color: #000; /* 黑底 */
+    color: #fff; /* 白字 */
+    text-align: center; /* 文字居中 */
+    padding: 15px 0; /* 上下内边距 */
+    font-size: 24px; /* 字体大小 */
+    font-family: Arial, sans-serif; /* 字体 */
   }
 </style>
 </head>
 <body>
-<div class="banner-container">
-  <div class="banner-slideshow">
-    <!-- 这里放你的图片 URL -->
-    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/3.png" alt="图片1" />
-    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/2.png" alt="图片2" />
-    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/1.png" alt="图片3" />
-  </div>
+<div class="top-nav">
+  百万导航站
 </div>
 </body>
 </html>
