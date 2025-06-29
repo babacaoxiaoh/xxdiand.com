@@ -2,34 +2,40 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
-<title>百万导航站</title>
+<title>图片轮播居中</title>
 <style>
-  /* 容器样式，宽度百分比（比如100%） */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  /* 容器保持中央 */
   .banner-container {
-    width: 100%; /* 让容器宽度占满父元素 */
-    max-width: 970px; /* 最大宽度控制为970px */
+    width: 100%; /* 占满页面宽度 */
+    max-width: 970px; /* 最大宽度970px */
     height: 80px;
     overflow: hidden;
+    margin: 0 auto; /* 居中 */
     position: relative;
     border: 1px solid #ccc;
-    margin: 0 auto; /* 居中 */
   }
 
-  /* 轮播内容 */
+  /* 轮播内容，使用transform动画 */
   .banner-slideshow {
     display: flex;
-    width: calc(970px * 3); /* 根据图片数量调整总宽度，如果图片是3张 */
+    /* 根据图片数量设宽度，这里示例3张图片 */
+    width: calc(970px * 3);
+    height: 80px;
     animation: slide 10s linear infinite;
   }
 
-  /* 图片样式 */
+  /* 单张图片 */
   .banner-slideshow img {
-    width: 100%; /* 让每张图片响应式宽度 */
+    width: 970px; /* 保持图片宽度为970px */
     height: 80px;
     flex-shrink: 0;
   }
 
-  /* 关键帧动画调整，使之适应不同图片数量 */
+  /* 动画关键帧 */
   @keyframes slide {
     0% {
       transform: translateX(0);
@@ -38,29 +44,29 @@
       transform: translateX(0);
     }
     33.33% {
-      transform: translateX(-100%);
+      transform: translateX(-970px);
     }
     58.33% {
-      transform: translateX(-100%);
+      transform: translateX(-970px);
     }
     66.66% {
-      transform: translateX(-200%);
+      transform: translateX(-1940px);
     }
     100% {
       transform: translateX(0);
     }
   }
 
-  /* 媒体查询，手机端样式调整 */
-  @media (max-width: 768px) {
+  /* 手机端调整 */
+  @media(max-width: 768px) {
     .banner-container {
       height: 60px;
     }
     .banner-slideshow {
-      /* 这里的动画可以调整 */
-      animation: slide 30s linear infinite;
+      animation-duration: 8s;
     }
     .banner-slideshow img {
+      width: 100%; /* 自适应宽度 */
       height: 60px;
     }
   }
@@ -69,10 +75,9 @@
 <body>
 <div class="banner-container">
   <div class="banner-slideshow">
-    <!-- 替换图片地址 -->
-    <img src="https://img.aimga.top/img/yp2.gif" alt="图片1" />
-    <img src="https://img.aimga.top/img/yp2.gif" alt="图片2" />
-    <img src="https://img.aimga.top/img/yp2.gif" alt="图片3" />
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/5.png" alt="图片1" />
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/5.png" alt="图片2" />
+    <img src="https://raw.githubusercontent.com/babacaoxiaoh/shuang/refs/heads/main/images/5.png" alt="图片3" />
   </div>
 </div>
 </body>
